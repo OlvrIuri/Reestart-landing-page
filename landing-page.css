@@ -1,0 +1,340 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/*
+Media device breakpoints:
+
+Pequenos:600px-960px
+Médios:960px-1280px
+Grandes:1280-1920
+
+
+*/
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    color: white;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #0D0D0D;
+    font-family: "Inter", sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+header > h3{
+    margin: 24px;
+    font-size: 2rem;
+}
+header > nav{
+    margin: 24px;
+}
+header > nav > a{
+    margin: 8px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: 0.3s ease-out;
+}
+header > nav > a:hover{
+    color: gray;
+}
+.btn{
+    text-decoration: none;
+    background-color: black;
+    font-size: 1rem;
+    color: white;
+    padding: 16px;
+    border-radius: 16px;
+    transition: 0.3s ease-out;
+}
+.btn:hover{
+    color: gray;
+}
+.hero{
+    display: flex;
+    margin-top: 32px;
+    margin-bottom: 96px;
+}
+.hero > div{
+    width: 50%;
+    height: 540px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.hero-text{
+    box-shadow: 3px 3px 14px rgba(0, 0, 0, 0.656);
+    text-align: justify;
+    width: 80%;
+    padding: 8px;
+}
+.hero-text > p{
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.508);
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+.hero-text > h1{
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+}
+.hero-imagem{
+    width: 50%;
+    background-image: url(imagens/pexels-ruslan-burlaka-40570-140945.jpg);
+    background-size: cover;
+}
+.features{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 64px;
+}
+.card > img{
+    height: 483px;
+    width: 362px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+.card{
+    flex-basis: 30%;
+}
+.card > h3{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 1.7rem;
+}
+.card > p{
+    margin-top: 16px;
+    color: grey;
+}
+.cta{
+    display: flex;
+}
+.cta > article > div{
+    width: 50%;
+}
+.cta-imagem1 > img{
+    width: 537px;
+    height: 432px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+}
+.cta-ar1{
+    display: flex;
+    justify-content: space-around;
+}
+.cta-text1 > h2{
+    margin-bottom: 24px;
+    font-size: 2.3rem;
+}
+.cta-text1 > p{
+    color: gray;
+}
+.cta-text1{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.cta-imagem2 > img{
+    width: 537px;;
+    height: 432px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+}
+.cta-ar2{
+    display: flex;
+    justify-content: space-around;
+    margin: 24px;
+}
+.cta-text2 > h2{
+    margin-bottom: 24px;
+    font-size: 2.3rem;
+}
+.cta-text2 > p{
+    color: gray;
+}
+.cta-text2{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+footer{
+    display: flex;
+    margin-bottom: 32px;
+}
+footer > h3{
+    margin-left: 32px;
+}
+footer > nav > ul > a{
+    color: gray;
+    text-decoration: none;
+    margin: 8px 16px;
+    transition: 0.4s ease-out;
+}
+footer > nav > ul > a:hover{
+    color: white;
+}
+
+/* ================================================= */
+/* MEDIA QUERY PARA TELAS MENORES (Max 768px)        */
+/* ================================================= */
+
+@media screen and (max-width: 768px) {
+    /* ----------------------------------------------- */
+    /* GERAL E HEADER: (Ajusta margens e tipografia para celular) */
+    /* ----------------------------------------------- */
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    header > h3 {
+        margin: 16px 0; /* Ajuste vertical de margem */
+    }
+    header > nav {
+        margin: 0;
+        padding-bottom: 16px;
+    }
+    header > nav > a {
+        font-size: 1rem; /* Reduz tamanho do link */
+        margin: 8px; /* Ajusta espaçamento entre links */
+    }
+    .btn {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+
+    /* ----------------------------------------------- */
+    /* HERO SECTION: (Empilha e Ajusta a Imagem) */
+    /* ----------------------------------------------- */
+    .hero {
+        flex-direction: column; 
+        align-items: center; 
+        margin-bottom: 48px; 
+    }
+    .hero > div {
+        width: 100%; 
+        height: auto; 
+    }
+    .hero-text {
+        width: 90%; 
+        text-align: center;
+        padding: 16px 8px;
+    }
+    .hero-text > h1 {
+        font-size: 2rem; 
+    }
+    .hero-imagem {
+        width: 90%; /* Usa 90% para dar um respiro lateral */
+        height: 300px; 
+        margin-top: 24px; 
+        background-size: cover;
+        background-position: center;
+    }
+    
+    /* ----------------------------------------------- */
+    /* FEATURES SECTION: (Cartões Empilhados e Flexíveis) */
+    /* ----------------------------------------------- */
+    .features {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 0 16px; 
+        margin-bottom: 32px; /* Reduz espaçamento inferior */
+    }
+    .card {
+        flex-basis: 90%; /* Ocupa 90% para margem */
+        width: 90%; 
+        margin: 16px 0; 
+        text-align: center;
+    }
+    .card > img {
+        /* Garante que a imagem do card seja fluida */
+        max-width: 100%; 
+        height: auto; 
+    }
+
+    /* ----------------------------------------------- */
+    /* CTA SECTION: (Empilha e Alinha o Conteúdo) */
+    /* ----------------------------------------------- */
+    /* Remove a classe 'cta' do CSS principal pois ela não tem efeito em sua estrutura */
+
+    .cta-ar1, .cta-ar2 {
+        flex-direction: column; 
+        align-items: center;
+        margin-top: 32px; /* Espaçamento menor */
+    }
+
+    /* A principal correção: Invertemos o texto e imagem */
+    .cta-ar2 {
+        flex-direction: column-reverse; /* Inverte a ordem para manter o dinamismo */
+    }
+    
+    .cta-text1, .cta-text2 {
+        width: 90%; 
+        padding: 16px 0;
+        text-align: center;
+    }
+    .cta-text1 > h2, .cta-text2 > h2 {
+        font-size: 1.6rem; /* Reduz o H2 */
+        margin-bottom: 16px;
+    }
+
+    .cta-imagem1, .cta-imagem2 {
+        width: 90%; 
+        margin: 16px 0;
+    }
+    /* Usa a correção feita no CSS Padrão: Imagem fluida */
+    .cta-imagem1 > img, .cta-imagem2 > img {
+        max-width: 100%; 
+        height: auto; 
+    }
+
+    /* ----------------------------------------------- */
+    /* FOOTER: (Empilha e Centraliza) */
+    /* ----------------------------------------------- */
+    footer {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+        padding: 16px 0;
+    }
+    footer > h3 {
+        margin: 16px 0;
+    }
+    footer > nav > ul {
+        display: flex; 
+        margin-bottom: 8px;
+        padding: 0; /* Remove padding que pode estar empurrando */
+        list-style: none; /* Garante que os marcadores não apareçam */
+    }
+    footer > nav {
+        margin-bottom: 16px; /* Adiciona espaço entre grupos de links */
+    }
+}
+/* 1. ESTADO INICIAL (Escondido) */
+/* Crie uma classe para todos os elementos que você quer animar (ex: .fade-in) */
+.hidden {
+    opacity: 0;
+    /* Move o elemento ligeiramente para baixo para o efeito "slide-up" */
+    transform: translateY(20px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 2. ESTADO FINAL (Visível e Animado) */
+/* Quando o JavaScript adicionar essa classe, a animação é ativada. */
+.show {
+    opacity: 1;
+    transform: translateY(0); /* Volta o elemento para sua posição original */
+}
